@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栗子</title>
+</head>
+
+<body>
+    <canvas id="demo"></canvas>
+    <script src="../dist/canvas-arrow.min.js"></script>
+    <script>
+        var canvas = document.querySelector("#demo");
+        var ctx = canvas.getContext("2d");
+
+        //1、画起点坐标为(10,10) 终点坐标为(80,100)的黑色箭头
+        ctx.beginPath();
+        ctx.save();
+        ctx.fillStyle = "black";
+        ctx.drawArrow(10, 10, 80, 100);
+        ctx.fill();
+        ctx.restore();
+
+
+        //2、画起点坐标为(100,100) 终点坐标为(70,20) 宽度为7的红箭头
+        ctx.beginPath();
+        ctx.save();
+        ctx.fillStyle = "red";
+        ctx.drawArrow(100, 100, 70, 20, 7);
+        ctx.fill();
+        ctx.restore();
+
+    </script>
+</body>
+
+</html>

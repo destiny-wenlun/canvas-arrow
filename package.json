@@ -1,0 +1,40 @@
+{
+  "name": "canvas-arrow",
+  "version": "1.0.0",
+  "description": "为canvas ctx扩展画箭头的方法",
+  "main": "./dist/canvas-arrow.js",
+  "types": "types/canvas-arrow.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "src"
+  ],
+  "scripts": {
+    "uglifyjs": "uglifyjs dist/canvas-arrow.js -o dist/canvas-arrow.min.js",
+    "build": "tsc & npm run uglifyjs",
+    "release": "npm run lib & npm publish"
+  },
+  "keywords": [
+    "canvas",
+    "arrow",
+    "canvas ext",
+    "canvas-ext-arrow",
+    "canvas extend",
+    "箭头",
+    "画箭头"
+  ],
+  "author": "wenlun",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.2.2",
+    "uglify-js": "^3.4.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/destiny-wenlun/canvas-arrow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/destiny-wenlun/canvas-arrow/issues"
+  },
+  "homepage": "https://github.com/destiny-wenlun/canvas-arrow#readme"
+}

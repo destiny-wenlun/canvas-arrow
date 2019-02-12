@@ -12,7 +12,7 @@
   "scripts": {
     "uglifyjs": "uglifyjs dist/canvas-arrow.js -o dist/canvas-arrow.min.js",
     "build": "tsc & npm run uglifyjs",
-    "release": "npm run lib & npm publish"
+    "release": "npm run build & npm publish"
   },
   "keywords": [
     "canvas",

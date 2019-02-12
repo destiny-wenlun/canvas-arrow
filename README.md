@@ -1,3 +1,6 @@
+## 效果
+<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo2.png"  />
+
 ## 使用
 * script标签引入dist/canvas-arrow.js 或 dist/canvas-arrow.min.js
 * npm：运行命令 npm install -S canvas-arrow，然后import 'canvas-arrow'
@@ -38,7 +41,7 @@
 </html>
 ```
 * 效果  
-<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo.png"  />
+<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo1.png"  />
 
 * npm 模块开发
 ```javascript
@@ -66,7 +69,7 @@ ctx.fill();
 ctx.restore();
 ```
 * 效果  
-<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo.png"  />
+<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo1.png"  />
 
 ## 方法参数说明 drawArrow(x0,y0,x1,y1,width)
 |参数|说明|默认值|

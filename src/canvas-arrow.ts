@@ -1,6 +1,16 @@
 interface CanvasRenderingContext2D {
     /**
-     * 画箭头
+      * 描绘箭头路径，需要自己stroke或fill
+      * @param x0 起点x坐标
+      * @param y0 起点y坐标
+      * @param x1 终点x坐标
+      * @param y1 终点y坐标
+      * @param width 箭头宽度，默认为3，且最小值是3
+      */
+    arrow(x0: number, y0: number, x1: number, y1: number, width?: number): any
+
+    /**
+     * 与arrow方法相同，建议使用arrow
      * @param x0 起点x坐标
      * @param y0 起点y坐标
      * @param x1 终点x坐标
@@ -8,10 +18,29 @@ interface CanvasRenderingContext2D {
      * @param width 箭头宽度，默认为3，且最小值是3
      */
     drawArrow(x0: number, y0: number, x1: number, y1: number, width?: number): any
+
+    /**
+     * 画箭头线条，
+     * @param x0 起点x坐标
+     * @param y0 起点y坐标
+     * @param x1 终点x坐标
+     * @param y1 终点y坐标
+     * @param width 箭头宽度，默认为3，且最小值是3
+     */
+    strokeArrow(x0: number, y0: number, x1: number, y1: number, width?: number): any
+
+    /**
+     * 填充一个箭头
+     * @param x0 起点x坐标
+     * @param y0 起点y坐标
+     * @param x1 终点x坐标
+     * @param y1 终点y坐标
+     * @param width 箭头宽度，默认为3，且最小值是3
+     */
+    fillArrow(x0: number, y0: number, x1: number, y1: number, width?: number): any
 }
 
-/** 画箭头*/
-CanvasRenderingContext2D.prototype.drawArrow = function (x0, y0, x1, y1, width = 3) {
+CanvasRenderingContext2D.prototype.arrow = CanvasRenderingContext2D.prototype.drawArrow = function (x0, y0, x1, y1, width = 3) {
     if (width < 3) width = 3;//最小宽度
     /**极坐标[以(x0,y0)为原点] 转换 画布坐标 */
     const polarCoordinate2canvasCoordinate = (x0: number, y0: number, r: number, radian: number) => {
@@ -51,3 +80,19 @@ CanvasRenderingContext2D.prototype.drawArrow = function (x0, y0, x1, y1, width =
     this.lineTo(p3.x, p3.y);
     this.closePath();
 };
+
+CanvasRenderingContext2D.prototype.strokeArrow = function (x0, y0, x1, y1, width = 3) {
+    this.save();
+    this.beginPath();
+    this.arrow(x0, y0, x1, y1, width);
+    this.stroke();
+    this.restore();
+}
+
+CanvasRenderingContext2D.prototype.fillArrow = function (x0, y0, x1, y1, width = 3) {
+    this.save();
+    this.beginPath();
+    this.arrow(x0, y0, x1, y1, width);
+    this.fill();
+    this.restore();
+}

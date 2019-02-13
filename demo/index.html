@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>栗子</title>
+    <title>栗子1</title>
 </head>
 
 <body>
-    <canvas id="demo"></canvas>
+    <canvas id="demo" width="450" height="450"></canvas>
     <script src="../dist/canvas-arrow.min.js"></script>
     <script>
         var canvas = document.querySelector("#demo");
@@ -19,7 +19,7 @@
         ctx.beginPath();
         ctx.save();
         ctx.fillStyle = "black";
-        ctx.drawArrow(10, 10, 80, 100);
+        ctx.arrow(10, 10, 80, 100);//或ctx.drawArrow(10, 10, 80, 100)
         ctx.fill();
         ctx.restore();
 
@@ -30,6 +30,18 @@
         ctx.fillStyle = "red";
         ctx.drawArrow(100, 100, 70, 20, 7);
         ctx.fill();
+        ctx.restore();
+
+        //3、使用strokeArrow方法
+        ctx.save();
+        ctx.strokeStyle = "green";
+        ctx.strokeArrow(200, 200, 110, 110, 7);
+        ctx.restore();
+
+        //4、使用fillArrow方法
+        ctx.save();
+        ctx.fillStyle = "brown";
+        ctx.fillArrow(200, 200, 180, 100, 7);
         ctx.restore();
 
     </script>

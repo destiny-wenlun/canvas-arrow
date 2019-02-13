@@ -1,6 +1,5 @@
 "use strict";
-/** 画箭头*/
-CanvasRenderingContext2D.prototype.drawArrow = function (x0, y0, x1, y1, width) {
+CanvasRenderingContext2D.prototype.arrow = CanvasRenderingContext2D.prototype.drawArrow = function (x0, y0, x1, y1, width) {
     if (width === void 0) { width = 3; }
     if (width < 3)
         width = 3; //最小宽度
@@ -41,4 +40,20 @@ CanvasRenderingContext2D.prototype.drawArrow = function (x0, y0, x1, y1, width) 
     this.lineTo(p4.x, p4.y);
     this.lineTo(p3.x, p3.y);
     this.closePath();
+};
+CanvasRenderingContext2D.prototype.strokeArrow = function (x0, y0, x1, y1, width) {
+    if (width === void 0) { width = 3; }
+    this.save();
+    this.beginPath();
+    this.arrow(x0, y0, x1, y1, width);
+    this.stroke();
+    this.restore();
+};
+CanvasRenderingContext2D.prototype.fillArrow = function (x0, y0, x1, y1, width) {
+    if (width === void 0) { width = 3; }
+    this.save();
+    this.beginPath();
+    this.arrow(x0, y0, x1, y1, width);
+    this.fill();
+    this.restore();
 };

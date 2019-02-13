@@ -1,6 +1,6 @@
 {
   "name": "canvas-arrow",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "为canvas ctx扩展画箭头的方法",
   "main": "./dist/canvas-arrow.js",
   "types": "types/canvas-arrow.d.ts",

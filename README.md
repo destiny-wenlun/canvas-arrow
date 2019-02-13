@@ -53,7 +53,7 @@
 </html>
 ```
 * 效果  
-<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo.png"  />
+<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo.jpg"  />
 
 * npm 模块开发
 ```javascript
@@ -93,7 +93,7 @@ ctx.fillArrow(200, 200, 180, 100, 7);
 ctx.restore();
 ```
 * 效果  
-<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo.png"  />
+<img src="https://raw.githubusercontent.com/destiny-wenlun/canvas-arrow/master/img/demo.jpg"  />
 
 ## 方法说明
 |方法|说明|
